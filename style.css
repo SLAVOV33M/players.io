@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@300;400&family=Open+Sans&family=Open+Sans+Condensed:wght@300&family=Roboto+Condensed:wght@300;400&display=swap');
+
+:root{
+    --font-1: 'Big Shoulders Display', cursive;
+    --font-2: 'Open Sans', sans-serif;
+    --font-3: 'Open Sans Condensed', sans-serif;
+    --font-4: 'Roboto Condensed', sans-serif;
+    --bg-btn: linear-gradient(to bottom right, #10C403, #82CC00);
+    --green: #76BA00;
+}
+body{
+    background:#FFF;
+    font-size:16px;
+    font-family:var(--font-1);
+    color:#292929;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+:before, 
+:after{
+    content: '';
+    position:absolute;
+}
+a{
+    display:inline-block;
+    text-decoration:none;
+}
+span{
+    display:inline-block;
+}
+.jd-container{
+    width:98%;
+    max-width:1068px;
+    height:auto;
+    position:relative;
+    margin:0 auto;
+    display:flex;
+}
+.jd-content .jd-container{
+    flex-direction:column;
+}
+header, nav, main, footer{
+    width:100%;
+}
+.jd-top{
+    height:120px;
+    background:#090909;
+}
+.jd-top .jd-container{
+    height:120px;
+    align-items:center;
+    justify-content:space-between;
+    z-index:10;
+}
+.jd-logo, .jd-logo img{
+    width:120px;
+    height:80px;
+}
+.jd-user{
+    width:250px;
+    height:40px;
+    border-radius:40px;
+    background:var(--bg-btn);
+    color:#FFF;
+    text-align:center;
+    line-height:40px;
+    font-size:1.4rem;
+    position:relative;
+}
+.jd-user:before{
+    width:250px;
+    height:40px;
+    border-radius:40px;
+    background:var(--bg-btn);
+    top:0;
+    left:0;
+    z-index:-1;
+    filter:blur(25px);
+}
+.jd-menu{
+    height:40px;
+    background:#202223;
+}
+.jd-menu .jd-container{
+    justify-content:center;
+}
+.jd-box-menu{
+    width:220px;
+    height:40px;
+    display:flex;
+    justify-content:space-between;
+}
+.jd-btn-menu{
+    width:100px;
+    height:40px;
+    text-align:center;
+    line-height:40px;
+    color:#FFF;
+    text-transform:uppercase;
+    box-shadow:0 -5px var(--green) inset;
+    font-size:1.2rem; 
+}
+.jd-title{
+    line-height:40px;
+    text-transform:uppercase;
+    margin:20px 0;
+    text-align:center;
+    font-weight:500;
+}
+.jd-desc{
+    height:32px;
+    text-align:center;
+}
+.jd-title-new{
+    color:var(--green);
+    text-align:center;
+    height:40px;
+    text-transform:uppercase;
+    font-weight:500;
+    position:relative;
+    margin-bottom:40px;
+}
+.jd-title-new:after{
+    width:200px;
+    height:2px;
+    background:#202223;
+    bottom:0;
+    left:calc(50% - 100px);
+    box-shadow:100px 0 var(--green) inset;
+}
+[class*='jd-content-player']{
+    height:auto;
+    padding-bottom:40px;
+    position:relative;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    z-index:10;
+    margin-bottom:40px;
+}
+.jd-content-player-new:after{
+    width:84%;
+    height:1px;
+    background:#D8D8D8;
+    left:50%;
+    transform:translateX(-50%);
+    bottom:0;
+}
+.jd-box-player{
+    width:257px;
+    height:380px;
+    background:#FFF;
+    position:relative;
+    transition:all .2s ease-out;
+    top:0;
+    text-align:center;
+    margin-bottom:40px;
+}
+.jd-box-player:after{
+    width:100%;
+    height:100%;
+    background:linear-gradient(transparent, rgba(0,0,0,.3));
+    top:0;
+    left:0;
+    filter:blur(25px);
+    z-index:-1;
+}
+.jd-box-player:hover{
+    top:-10px;
+}
+.jd-box-img-player{
+    width:100%;
+    height:210px;
+    position:relative;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.jd-img-player{
+    position:absolute;
+    width:100%;
+}
+.jd-new{
+    position:absolute;
+    background:var(--green);
+    width:110px;
+    height:24px;
+    line-height:24px;
+    text-align:center;
+    text-transform:uppercase;
+    box-shadow:0 5px 6px rgba(0,0,0,.6);
+    top:20px;
+    left:-25px;
+    transform:rotate(-45deg);
+}
+.jd-code{
+    width:60px;
+    height:25px;
+    text-align:center;
+    line-height:25px;
+    background:#76BA00;
+    text-transform:uppercase;
+    border-radius:2px;
+    box-shadow:5px 5px 5px rgba(0,0,0,.2);
+    position:absolute;
+    top:197px;
+    right:20px;
+}
+.jd-price{
+    height:40px;
+    line-height:40px;
+    margin:20px 0;
+    text-transform:uppercase;
+    font-weight:500;
+}
+.jd-price sup{
+    font-size:1rem;
+}
+.jd-btn-zoom{
+    width:110px;
+    height:36px;
+    border-radius:36px;
+    border:none;
+    outline:none;
+    background:var(--bg-btn);
+    font-family:var(--font-1);
+    text-transform:uppercase;
+    font-size:1.4rem;
+    box-shadow:0 0 20px rgba(16,193,3,.5);
+    cursor:pointer;
+}
+.jd-size{
+    width:237px;
+    height:26px;
+    border-top:solid 1px #D5D5D5;
+    text-align:left;
+    line-height:26px;
+    margin:20px 10px;
+}
+.jd-footer{
+    height:195px;
+    background:#202223;
+    padding-top:40px;
+    box-shadow:0 -40px #111 inset;
+}
+.jd-footer .jd-container{
+    justify-content:center;
+    flex-direction:column;
+    align-items:center;
+}
+.jd-menu-footer{
+    width:180px;
+    display:flex;
+    justify-content:space-around;
+}
+.jd-btn-footer{
+    width:70px;
+    color:var(--green);
+    box-shadow:0 -2px #FFF inset;
+}
+.jd-desc-footer{
+    color:#FFF;
+    line-height:50px;
+}
+.jd-credits{
+    color:var(--green);
+    margin-top:35px;
+}
+.jd-modal{
+    width:100%;
+    height:100vh;
+    position:fixed;
+    top:0;
+    left:0;
+    background:rgba(0,0,0,.5);
+    z-index:100;
+    opacity:0;
+    visibility:hidden;
+    transition:all .5s ease-out;
+}
+.jd-modal .jd-container{
+    height:100vh;
+}
+.jd-content-modal{
+    width:100%;
+    max-width:800px;
+    height:100vh;
+    position:relative;
+    overflow:hidden;
+}
+.jd-box-modal{
+    width:94%;
+    max-width:800px;
+    height:auto;
+    background:#FFF;
+    padding-bottom:30px;
+    position:absolute;
+    top:150px;
+    left:50%;
+    transform:translateX(-50%);
+    box-shadow:0 0 60px rgba(0,0,0,.3);
+}
+.jd-top-modal{
+    width:100%;
+    height:46px;
+    background:#202223;
+    display:flex;
+    justify-content:space-between;
+}
+.jd-title-modal{
+    display:inline;
+    height:46px;
+    line-height:46px;
+    color:var(--green);
+    padding-left:20px;
+    text-transform:uppercase;
+    font-size:1.5rem;
+    font-weight:500;
+}
+.jd-btn-close{
+    width:46px;
+    height:46px;
+    background:var(--green);
+    position:relative;
+    cursor:pointer;
+}
+.jd-btn-close:before, 
+.jd-btn-close:after{
+    width:20px;
+    height:3px;
+    background:#FFF;
+    top:calc(50% - 1.5px);
+    left:calc(50% - 10px);
+}
+.jd-btn-close:before{
+    transform:rotate(-45deg);
+}
+.jd-btn-close:after{
+    transform:rotate(45deg);
+}
+.jd-box-player-modal{
+    width:80%;
+    max-width:575px;
+    padding-top:30px;
+    margin-left:10%;
+    border-bottom:solid 1px #D5D5D5;
+}
+.jd-box-img-modal{
+    width:100%;
+    height:350px;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.jd-img-modal{
+    width:100%;
+}
+.jd-item-modal{
+    display:block;
+    height:36px;
+    line-height:36px;
+    text-transform:uppercase;
+    font-size:1.4rem;
+}
+.jd-item-modal strong{
+    color:var(--green);
+    font-weight:500;
+}
+.jd-item-modal sup{
+    font-size:.8rem;
+    padding-left:5px;
+}
+.jd-show{
+    opacity:1;
+    visibility:visible;
+}
+.jd-drop{
+    top:150px;
+}
+@media screen and (min-width:728px){
+    .jd-menu .jd-container{
+        justify-content:flex-end;
+    }
+}
+@media screen and (min-width:835px){
+    .jd-content-modal{
+        left:calc(50% - 400px);
+    }
+    .jd-box-player-modal{
+        margin-left:calc(50% - 287.5px);
+    }
+    .jd-box-img-modal{
+        width:575px;
+        height:460px;
+    }
+}
