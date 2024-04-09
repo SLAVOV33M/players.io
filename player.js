@@ -1,11 +1,7 @@
 var Modelos = [
 	{
         order: "new",
-        img: "https://i.postimg.cc/dDMWjMDh/modelo-multradio.jpg",
-        model: 17,
-        price: 6000,
-        size: "920 x 756",
-        id: 17
+        
     },
 	{
         order: "new",
